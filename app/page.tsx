@@ -1,5 +1,5 @@
-import { Card } from "@/component/cards/card";
-import { ProductCard } from "@/component/cards/product-cards";
+import { Card } from "@/component/i-tect-card/card";
+import { ProductCard } from "@/component/i-tect-card/product-cards";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,7 +18,6 @@ export default function Home() {
       desc={"In today’s fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations"}
       />
 
-      <ProductCard/>
      </main>
   );
 }
