@@ -13,20 +13,27 @@ import { title } from "process";
 
 export function ProductCard({
 
-   images=[ "https://i.imgur.com/KeqG6r4.jpeg"],
+   images=[ "https://opcionesadministrativas.com/shop/manufacturer-site?&transition=top22183902132570"],
    title="shoes",
    description="Best shoes in town",
    price=34
 
 }) {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
+    <Card className="relative mx-auto w-full max-w-sm pt-0 overflow-hidden">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
         src={images[0]}
         alt="Event cover"
         className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
       />
+      {/* <Image
+        src={images[0]}
+        alt="Event cover"
+        width={200}
+        hieght={200}
+        className="relative z-20 aspect-5/3 w-full object-cover brightness-60 grayscale dark:brightness-40"
+      /> */}
       <CardHeader>
         <CardAction>
           <Badge variant="secondary">{price}</Badge>
