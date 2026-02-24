@@ -1,5 +1,7 @@
 
-// function to get product by id 
+// // function to get product by id 
+
+// import { ProductRespone } from "@/component/lib/type/products";
 
 import { ProductRespone } from "@/component/lib/type/products";
 
@@ -11,9 +13,6 @@ async function getProductById(id:string){
     const product=await data.json()
     return product;
 }
-
-
-
 export default async function ProductDetailPage(
     {params}
     :
