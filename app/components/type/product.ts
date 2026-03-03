@@ -12,3 +12,11 @@ export type Category={
     id:number;
     slug:string;
 }
+
+export type ProductReques={
+    title:string;
+    price:number;
+    description:string;
+    categoryId:number;
+    
+}

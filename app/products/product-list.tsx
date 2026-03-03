@@ -27,6 +27,11 @@ export default async function ProductList() {
               images={[product.images[0]]}
               title={product.title}
               description={product.description}
+              price={1000}
+  //               images,
+  // title,
+  // description,
+  // price,
             />
           </Link>
         ))}
