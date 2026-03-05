@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image"
 
 type ProductCardProps = {
   images: string[]
@@ -24,13 +25,14 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <Card className="relative mx-auto w-full max-w-sm pt-0 overflow-hidden">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-
-      <img
-        src={images[0]}
-        alt={title}
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
+    <div className="relative aspect-video w-full">
+        <Image
+          src={images[0]}
+          alt={title}
+          fill
+          className="object-cover brightness-60 grayscale dark:brightness-40"
+        />
+      </div>
 
       <CardHeader>
         <CardAction>

@@ -33,7 +33,7 @@ export function Card({ source, title, desc }) {
   return (
     <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
       <a href="#">
-        <img className="rounded-base" src={source} alt="" />
+        <img className="rounded-base" src={source} alt="image" />
       </a>
       <a href="#">
         <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">{title}</h5>

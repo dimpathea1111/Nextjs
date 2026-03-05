@@ -80,7 +80,6 @@ export default function ProductForm({ categories = [] }: Props) {
     alert("Failed ");
   }
 
-
 }
 
 
@@ -112,7 +111,7 @@ export default function ProductForm({ categories = [] }: Props) {
         render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
             <FieldLabel>Price</FieldLabel>
-            <Input type="number" {...field} />
+            <Input type="number" {...field} placeholder="3000$" />
             {fieldState.error && (
               <FieldError errors={[fieldState.error]} />
             )}

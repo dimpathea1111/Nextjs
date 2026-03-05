@@ -26,6 +26,9 @@
 //   )
 // }
 
+
+
+//  goode 
 import { ProductCard } from "@/component/i-tect-card/product-cards";
 const BASE_URL=process.env.NEXT_PUBLIC_API
 
