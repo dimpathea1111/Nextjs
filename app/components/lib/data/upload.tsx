@@ -1,21 +1,35 @@
-export type UploadResponse = {
-  location: string;
-};
+// export type UploadResponse = {
+//   location: string;
+// };
 
-export async function UploadImage(
-  formData: FormData
-): Promise<UploadResponse> {
-  const response = await fetch(
+// export async function UploadImage(
+//   formData: FormData
+// ): Promise<UploadResponse> {
+//   const response = await fetch(
+//     "https://api.escuelajs.co/api/v1/files/upload",
+//     {
+//       method: "POST",
+//       body: formData,
+//     }
+//   );
+
+//   if (!response.ok) {
+//     throw new Error("Upload failed");
+//   }
+
+//   return response.json();
+// }
+
+export async function UploadImage(formData: FormData) {
+  const res = await fetch(
     "https://api.escuelajs.co/api/v1/files/upload",
     {
       method: "POST",
       body: formData,
     }
-  );
+  )
 
-  if (!response.ok) {
-    throw new Error("Upload failed");
-  }
+  if (!res.ok) throw new Error("Upload failed")
 
-  return response.json();
+  return res.json()
 }
