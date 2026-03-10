@@ -6,8 +6,9 @@ import ProductLoading from "./products/loading";
 import { ThemeProvider } from "@/components/thems-provider";
 import Header from "@/components/header";
 import StoreProvider from "./StoreProvider";
-import Navbar from "./components/layout/navbar";
+// import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
+import Navbar from "./components/layout/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +57,7 @@ export default function RootLayout({
 
         
           <StoreProvider >
+            {/* <Navbar/> */}
             <Navbar/>
           <ThemeProvider  attribute="class"
             defaultTheme="system"

@@ -8,12 +8,18 @@ import { useAppSelector } from "@/app/lib/hooks"
 export default function Navbar() {
 
 
-  const cart = useAppSelector((state) => state.cart ?? {})
+  // const cart = useAppSelector((state) => state.cart ?? {})
 
-  const totalItems = Object.values(cart).reduce(
-    (sum, qty) => sum + qty,
-    0
-  )
+  // const totalItems = Object.values(cart).reduce(
+  //   (sum, qty) => sum + qty,
+  //   0
+  // )
+
+  const cart = useAppSelector((state) => state.card)
+
+const totalItems = cart
+  ? Object.values(cart).reduce((a, b) => a + b, 0)
+  : 0
 
   return (
  <nav className="w-full border-b bg-gray-300 backdrop-blur sticky top-0 z-50 shadow-sm">
