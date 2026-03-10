@@ -1,6 +1,12 @@
+
+
 import ProductListClient from "@/component/i-tect-card/product-list-client";
 import { fetchAllProduct } from "./components/lib/data/products";
 import type { Metadata } from "next";
+import { count } from "console";
+import { useAppSelector } from "./lib/hooks";
+import TexCard from "@/component/i-tect-card/TextCard";
+import ICard from "@/component/i-tect-card/iCard";
 
 export const metadata: Metadata = {
   title: "iShop - Home",
@@ -8,11 +14,16 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-
+// subscribe/received global state.
+// const count =useAppSelector(state.)=state.counter
   const products = fetchAllProduct();
 
   return (
     <main>
+      {/* show cross  component state*/}
+      {/* <p>Global state :{count}</p> */}
+      <TexCard/>
+      <ICard/>
       <ProductListClient fetchProducts={products} />
     </main>
   );

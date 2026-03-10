@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import ProductLoading from "./products/loading";
 import { ThemeProvider } from "@/components/thems-provider";
 import Header from "@/components/header";
+import StoreProvider from "./StoreProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,19 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           ></ThemeProvider> */}
+           {/* <ThemeProvider  attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            >
+              <Header/>
+        <Suspense fallback={<ProductLoading/>}>
+          {children}
+        </Suspense>
+        </ThemeProvider> */}
+
+        
+          <StoreProvider>
           <ThemeProvider  attribute="class"
             defaultTheme="system"
             enableSystem
@@ -49,6 +63,7 @@ export default function RootLayout({
           {children}
         </Suspense>
         </ThemeProvider>
+        </StoreProvider>
       </body>
     </html>
   );
