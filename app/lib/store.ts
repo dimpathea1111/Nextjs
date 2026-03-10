@@ -15,17 +15,17 @@
 // export type RootState = ReturnType<AppStore['getState']>
 // export type AppDispatch = AppStore['dispatch']
 
-
 import { configureStore } from "@reduxjs/toolkit"
 import counterReducer from "@/app/features/count/counterSlice"
+import cardReducer from "@/app/features/cart/cartSlice"  // ✅ ADD THIS
 
-export const makeStore = () => {
-  return configureStore({
+export const makeStore = () =>
+  configureStore({
     reducer: {
       counter: counterReducer,
+      card: cardReducer, // now it works
     },
   })
-}
 
 export type AppStore = ReturnType<typeof makeStore>
 export type RootState = ReturnType<AppStore["getState"]>

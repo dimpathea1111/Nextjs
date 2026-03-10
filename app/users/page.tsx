@@ -23,7 +23,7 @@ export default async function UserPage() {
 
   return (
     <main>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 bg-white">
         {users.map((user) => (
           <UserCard
             key={user.id}          

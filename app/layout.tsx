@@ -6,6 +6,8 @@ import ProductLoading from "./products/loading";
 import { ThemeProvider } from "@/components/thems-provider";
 import Header from "@/components/header";
 import StoreProvider from "./StoreProvider";
+import Navbar from "./components/layout/navbar";
+import Footer from "./components/layout/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         {/* {children} */}
-        <h2>Navbar Share</h2>
+        {/* <h2>Navbar Share</h2> */}
          {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -45,14 +48,15 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
             >
-              <Header/>
-        <Suspense fallback={<ProductLoading/>}>
-          {children}
-        </Suspense>
-        </ThemeProvider> */}
+            <Header/>
+            <Suspense fallback={<ProductLoading/>}>
+            {children}
+            </Suspense>
+            </ThemeProvider> */}
 
         
-          <StoreProvider>
+          <StoreProvider >
+            <Navbar/>
           <ThemeProvider  attribute="class"
             defaultTheme="system"
             enableSystem
@@ -63,7 +67,9 @@ export default function RootLayout({
           {children}
         </Suspense>
         </ThemeProvider>
+        <Footer/>
         </StoreProvider>
+
       </body>
     </html>
   );
