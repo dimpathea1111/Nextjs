@@ -18,13 +18,16 @@
 import { configureStore } from "@reduxjs/toolkit"
 import counterReducer from "@/app/features/count/counterSlice"
 import cardReducer from "@/app/features/cart/cartSlice"  // ✅ ADD THIS
+import { productApi } from "@/lib/features/product/productApi"
 
 export const makeStore = () =>
   configureStore({
     reducer: {
       counter: counterReducer,
       card: cardReducer, // now it works
+      [productApi.reducerPath]:[productApi.reducer]
     },
+    middleware:(getDefaultMiddleware)=>getDefaultMiddleware()
   })
 
 export type AppStore = ReturnType<typeof makeStore>

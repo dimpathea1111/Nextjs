@@ -5,7 +5,9 @@ export type ProductRespone={
     price:number;
     description:string;
     category:Category;
-    image:string[];
+    image:[];
+    creationAt:string;
+    updateAt:string;
 }
 
 export type Category={
